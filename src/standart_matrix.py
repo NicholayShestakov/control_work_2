@@ -46,3 +46,6 @@ class Matrix:
                     )
 
             return Matrix(result_list)
+        elif isinstance(other, int):
+            result_list = [[value * other for value in row] for row in self.matrix]
+            return Matrix(result_list)
